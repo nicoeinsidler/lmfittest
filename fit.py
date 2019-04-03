@@ -17,5 +17,8 @@ out = model.fit(y, params, x=x)
 print(out.fit_report(min_correl=0.25))
 
 
-plt.plot(data[0], data[1])
+plt.plot(x, y, label='data')
+plt.plot(x, out.init_fit, label='first fit')
+plt.plot(x, out.best_fit, label='best fit')
+plt.legend()
 plt.show()
